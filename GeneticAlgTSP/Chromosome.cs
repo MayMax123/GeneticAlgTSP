@@ -128,7 +128,7 @@ namespace GeneticAlgTSP
         public void SetToCombinedVersion(Chromosome chromosome1, Chromosome chromosome2)
         {
             this.Cities.Clear();
-            int j = this.rnd.GetRandomInt(this.Cities.Count);
+            int j = this.rnd.GetRandomInt(chromosome1.Cities.Count);
 
             //Add all the points from the 1st list until the chosen index
             for (int i = 0; i < j; i++)
