@@ -13,6 +13,10 @@ namespace GeneticAlgTSP
 
         public Chromosome(List<Point> points)
         {
+            //if(points.Count < 1)
+            //{
+            //    throw new ArgumentOutOfRangeException("The list points must have at least 1 element!");
+            //}
             rnd = GlobalRandom.CreateInstance();
             Cities = points;
         }
@@ -21,6 +25,10 @@ namespace GeneticAlgTSP
         public void RandomizeChromosome()
         {
             this.Cities = this.Cities.OrderBy((city) => this.rnd.GetRandomDouble()).ToList();
+            if (this.Cities.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list of cities must have at least 1 element!");
+            }
         }
 
         //Return a random chromosome if given a list of points
@@ -32,6 +40,11 @@ namespace GeneticAlgTSP
             {
                 int j = rnd.GetRandomInt(i, points.Count);
                 (points[i], points[j]) = (points[j], points[i]);
+            }
+
+            if (points.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list points must have at least 1 element!");
             }
 
             return new Chromosome(points);
@@ -72,12 +85,25 @@ namespace GeneticAlgTSP
         //Change the chromosome to a mutated version of another one
         public void SetToMutatedVersion(Chromosome chromosome)
         {
+            if (this.Cities.Count < 1 || chromosome.Cities.Count <1)
+            {
+                throw new ArgumentOutOfRangeException("The list of cities must have at least 1 element!");
+            }
+
             this.Cities.Clear();
             this.Cities.AddRange(chromosome.Cities);
 
+            int i, j;
             //Get 2 random indexes
-            int i = this.rnd.GetRandomInt(this.Cities.Count);
-            int j = this.rnd.GetRandomInt(this.Cities.Count);
+            i = this.rnd.GetRandomInt(this.Cities.Count);
+            while (true)
+            {
+                j = this.rnd.GetRandomInt(this.Cities.Count);
+                if(i != j)
+                {
+                    break;
+                }
+            }
 
             //Switch the values at those 2 indexes
             (this.Cities[i], this.Cities[j]) = (this.Cities[j], this.Cities[i]);
@@ -101,7 +127,12 @@ namespace GeneticAlgTSP
             //If the current points doesn't contain a point from 2nd list, add it
             for (int i = 0; i < cities2.Count; i++) 
                 if (!combinedChromosome.ContainsPoint(cities2[i])) combinedChromosome.Cities.Add(cities2[i]);
-            
+
+            if (combinedChromosome.Cities.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list combinedChromosome.Cities must have at least 1 element!");
+            }
+
             return combinedChromosome;
         }
 
@@ -121,22 +152,33 @@ namespace GeneticAlgTSP
             for (int i = 0; i < cities.Count; i++)
                 if (!combinedChromosome.ContainsPoint(cities[i])) combinedChromosome.Cities.Add(cities[i]);
 
+            if (combinedChromosome.Cities.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list combinedChromosome.Cities must have at least 1 element!");
+            }
+
             return combinedChromosome;
         }
 
         //Change the chromosome to a combined version of another 2
         public void SetToCombinedVersion(Chromosome chromosome1, Chromosome chromosome2)
         {
+            int j = this.rnd.GetRandomInt(chromosome1.Cities.Count);
             this.Cities.Clear();
-            int j = this.rnd.GetRandomInt(this.Cities.Count);
 
-            //Add all the points from the 1st list until the chosen index
-            for (int i = 0; i < j; i++)
-                this.Cities.Add(chromosome1.Cities[i]);
+            ////Add all the points from the 1st list until the chosen index
+            //for (int i = 0; i < j; i++)
+            //    this.Cities.Add(chromosome1.Cities[i]);
+            this.Cities.AddRange(chromosome1.Cities.GetRange(0, j));
 
             //If the current points doesn't contain a point from 2nd list, add it
             for (int i = 0; i < chromosome2.Cities.Count; i++)
                 if (!ContainsPoint(chromosome2.Cities[i])) this.Cities.Add(chromosome2.Cities[i]);
+
+            if (this.Cities.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list this.Cities must have at least 1 element!");
+            }
         }
 
         //Calculates the fitness based on the distance between cities

@@ -14,21 +14,21 @@ namespace GeneticAlgTSP
         //Get the points from the test text file
         static public List<Point> getTestPoints()
         {
-            return getPointsFromFile(@"C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\test.txt");
+            return getPointsFromFile(@"C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\test.txt");
         }
 
 
         //Get the points from the berlin text file
         static public List<Point> getBerlinPoints()
         {
-            return getPointsFromFile(@"C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\berlin.txt");
+            return getPointsFromFile(@"C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\berlin.txt");
         }
 
 
         //Get the points from the finland text file
         static public List<Point> getFinlandPoints()
         {
-            return getPointsFromFile(@"C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\finland.txt");
+            return getPointsFromFile(@"C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\finland.txt");
         }
 
 

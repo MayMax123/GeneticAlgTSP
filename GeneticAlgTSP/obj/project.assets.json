@@ -8,28 +8,23 @@
     "net5.0": []
   },
   "packageFolders": {
-    "C:\\Users\\max11\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "C:\\Users\\sebas\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Schule\\5. Jahrgang\\SWP\\GeneticAlgTSP\\GeneticAlgTSP\\GeneticAlgTSP.csproj",
+      "projectUniqueName": "C:\\Users\\sebas\\OneDrive\\programming\\Anderes\\MaxM\\GeneticAlgTSP\\GeneticAlgTSP\\GeneticAlgTSP.csproj",
       "projectName": "GeneticAlgTSP",
-      "projectPath": "C:\\Schule\\5. Jahrgang\\SWP\\GeneticAlgTSP\\GeneticAlgTSP\\GeneticAlgTSP.csproj",
-      "packagesPath": "C:\\Users\\max11\\.nuget\\packages\\",
-      "outputPath": "C:\\Schule\\5. Jahrgang\\SWP\\GeneticAlgTSP\\GeneticAlgTSP\\obj\\",
+      "projectPath": "C:\\Users\\sebas\\OneDrive\\programming\\Anderes\\MaxM\\GeneticAlgTSP\\GeneticAlgTSP\\GeneticAlgTSP.csproj",
+      "packagesPath": "C:\\Users\\sebas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\sebas\\OneDrive\\programming\\Anderes\\MaxM\\GeneticAlgTSP\\GeneticAlgTSP\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\max11\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\sebas\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -70,7 +65,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.208\\RuntimeIdentifierGraph.json"
       }
     }
   }

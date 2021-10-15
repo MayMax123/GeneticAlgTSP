@@ -14,7 +14,7 @@ namespace GeneticAlgTSP
         //Actual Random value
         private Random random;
 
-        public GlobalRandom()
+        private GlobalRandom()
         {
             random = new Random();
         }

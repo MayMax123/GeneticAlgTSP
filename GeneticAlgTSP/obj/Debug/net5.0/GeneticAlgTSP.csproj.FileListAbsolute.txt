@@ -14,3 +14,19 @@ C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAl
 C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\ref\GeneticAlgTSP.dll
 C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.pdb
 C:\Schule\5. Jahrgang\SWP\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.genruntimeconfig.cache
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.exe
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.deps.json
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.runtimeconfig.json
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.runtimeconfig.dev.json
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.dll
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\ref\GeneticAlgTSP.dll
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\bin\Debug\net5.0\GeneticAlgTSP.pdb
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.csprojAssemblyReference.cache
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.AssemblyInfoInputs.cache
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.AssemblyInfo.cs
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.csproj.CoreCompileInputs.cache
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.dll
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\ref\GeneticAlgTSP.dll
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.pdb
+C:\Users\sebas\OneDrive\programming\Anderes\MaxM\GeneticAlgTSP\GeneticAlgTSP\obj\Debug\net5.0\GeneticAlgTSP.genruntimeconfig.cache

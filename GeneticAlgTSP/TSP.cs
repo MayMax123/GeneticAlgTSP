@@ -32,7 +32,8 @@ namespace GeneticAlgTSP
                 Population[0].RandomizeChromosome();
             }
 
-            NextGeneration();
+            //NextGeneration();
+            RunAlgorithm();
         }
 
         public void NextGeneration()
@@ -42,7 +43,6 @@ namespace GeneticAlgTSP
             SortPopulationByFitness();
 
             if (this.CurrentGeneration > this.Config.GenerationCount) return;
-
             Console.WriteLine($"Gen {this.CurrentGeneration}: {this.Config.FitnessFunction(Population[0])}");
 
             if (this.CurrentGeneration == this.Config.GenerationCount) Console.WriteLine($"\n\nFinal score after {this.CurrentGeneration} Generations: {this.Config.FitnessFunction(Population[0])}");
@@ -54,20 +54,42 @@ namespace GeneticAlgTSP
                 //Get a random double between 0.00 and 1.00
                 double r = (double)this.rnd.GetRandomInt(0, 101) / 100;
 
-                //if (r <= this.Config.CombinationProbability) Population[i] = Chromosome.GetCombinedChromosome(ChooseRandomChromosome(), ChooseRandomChromosome());
-                //else if (r <= this.Config.CombinationProbability + this.Config.MutationProbability) Population[i] = Chromosome.GetMutatedChromosome(ChooseRandomChromosome());
-                //else Population[i].RandomizeChromosome();
+                if (r <= this.Config.CombinationProbability) Population[i] = Chromosome.GetCombinedChromosome(ChooseRandomChromosome(), ChooseRandomChromosome());
+                else if (r <= this.Config.CombinationProbability + this.Config.MutationProbability) Population[i] = Chromosome.GetMutatedChromosome(ChooseRandomChromosome());
+                else Population[i].RandomizeChromosome();
 
                 //if (r <= this.Config.CombinationProbability) Population[i] = ChooseRandomChromosome().GetCombinedVersion(ChooseRandomChromosome());
                 //else if (r <= this.Config.CombinationProbability + this.Config.MutationProbability) Population[i] = ChooseRandomChromosome().GetMutatedVersion();
                 //else Population[i].RandomizeChromosome();
 
-                if (r <= this.Config.CombinationProbability) Population[i].SetToCombinedVersion(ChooseRandomChromosome(), ChooseRandomChromosome());
-                else if (r <= this.Config.CombinationProbability + this.Config.MutationProbability) Population[i].SetToMutatedVersion(ChooseRandomChromosome());
-                else Population[i].RandomizeChromosome();
+                //if (r <= this.Config.CombinationProbability) Population[i].SetToCombinedVersion(ChooseRandomChromosome(), ChooseRandomChromosome());
+                //else if (r <= this.Config.CombinationProbability + this.Config.MutationProbability)
+                //{
+                //    Population[i].SetToMutatedVersion(ChooseRandomChromosome());
+                //    if (Population[i].Cities.Count < 1)
+                //    {
+                //        throw new ArgumentOutOfRangeException("The list of Population[i].cities must have at least 1 element!");
+                //    }
+                //}
+                //else
+                //{
+                //    Population[i].RandomizeChromosome();
+                //    if (Population[i].Cities.Count < 1)
+                //    {
+                //        throw new ArgumentOutOfRangeException("The list of Population[i].cities must have at least 1 element!");
+                //    }
+                //}
             }
 
-            NextGeneration();
+            //NextGeneration();
+        }
+
+        private void RunAlgorithm()
+        {
+            while(true)
+            {
+                NextGeneration();
+            }
         }
 
         public void SortPopulationByFitness()
@@ -79,6 +101,11 @@ namespace GeneticAlgTSP
         public Chromosome ChooseRandomChromosome()
         {
             int j = this.rnd.GetRandomInt((int)(Math.Floor(this.Config.SurvivalThreshold * (double)Population.Count)) + 1);
+
+            if (Population[j].Cities.Count < 1)
+            {
+                throw new ArgumentOutOfRangeException("The list of Population[j].Cities must have at least 1 element!");
+            }
 
             return Population[j];
         }
